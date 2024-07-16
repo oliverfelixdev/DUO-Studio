@@ -1,0 +1,179 @@
+:root {
+  --primary-background-color: #0f0d0d;
+  --secondary-background-color: #fefcff;
+  --tertiary-background-color: #edbfff;
+
+  --primary-color: #fefcff;
+  --secondary-color: #0f0d0d;
+  --tertiary-color: #edbfff;
+  --dis-color: #4b4b4b;
+  --font-size-primary: 7.5vw;
+  --font-size-secondary: 2.9vw;
+  --font-size-anchor: 14px;
+}
+
+::selection {
+  background-color: #edbfff;
+  color: #edbfff;
+}
+
+@font-face {
+  font-family: suisse-regular;
+  src: url(./src/assets/fonts/SuisseIntl-Regular-WebXL.woff2);
+}
+
+@font-face {
+  font-family: suisse-book;
+  src: url(./src/assets/fonts/SuisseIntl-Book-WebXL.woff2);
+}
+
+@font-face {
+  font-family: PPmori-regular;
+  src: url(./src/assets/fonts/PPMori-Regular.woff2);
+}
+
+@font-face {
+  font-family: PPmori-semibold;
+  src: url(./src/assets/fonts/PPMori-SemiBold.woff2);
+}
+
+a {
+  text-decoration: none;
+}
+
+#mousefollower {
+  background-color: var(--tertiary-background-color);
+  height: 17px;
+  width: 17px;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-radius: 50%;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) .2s;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(t--points);
+}
+
+/*TODO: globaly structured classes———————————————————————————————————————————————————————————————————— */
+/* text classes */
+.t--points {
+  font-size: 1.11vw;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.t--interection {
+  line-height: 2.99vw;
+  font-size: var(--font-size-secondary);
+  font-family: ppmori-regular;
+  font-weight: 600;
+}
+
+.t--mainTitle {
+  font-size: var(--font-size-primary);
+  line-height: 1;
+  letter-spacing: -5px;
+  font-family: ppmori-regular;
+  font-weight: 100;
+}
+
+.t--semiTitle {
+  font-size: 1.6vw;
+  font-weight: 100;
+  font-family: suisse-book;
+}
+
+.p--subtitle {
+  font-size: 1.2vw;
+}
+
+/* btn classes */
+.btn--sm {
+  padding: 0.3vw 1.5vw;
+  background-color: var(--tertiary-background-color);
+  color: var(--secondary-color);
+  border-radius: 100px;
+  font-size: var(--font-size-anchor);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn--sm:hover {
+  background-color: var(--primary-background-color);
+  color: var(--primary-color);
+}
+
+.btn--parallax {
+  background-color: var(--tertiary-background-color);
+  height: 11vw;
+  width: 11vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.1s linear;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn--parallax:hover {
+  background-color: var(--secondary-background-color);
+}
+
+.btn--parallax span {
+  overflow: hidden;
+  font-size: var(--font-size-anchor);
+  color: var(--secondary-color);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn--parallax2 {
+  background-color: var(--secondary-background-color);
+  color: var(--secondary-color);
+  height: 11vw;
+  width: 11vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn--parallax2:hover {
+  background-color: var(--primary-background-color);
+  color: var(--primary-color);
+}
+
+.btn--parallax2 span {
+  overflow: hidden;
+  font-size: var(--font-size-anchor);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*TODO: globaly structured classes———————————————————————————————————————————————————————————————————— */
+
+::-webkit-scrollbar {
+  display: none;
+}
